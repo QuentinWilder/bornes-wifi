@@ -5,7 +5,7 @@ from streamlit_folium import folium_static
 
 st.title('Bornes Wifi à Toulouse')
 
-path = '/home/atar/DataScience/WCS/checkpoint_2/bornes-wi-fi.csv'
+path = 'bornes-wi-fi.csv'
 df_bornes_wifi = pd.read_csv(path, sep=';')
 
 df_bornes_wifi['geo_point'] = df_bornes_wifi['Geo Point'].apply(lambda x: [float(x.split(',')[0]), float(x.split(',')[1])])
